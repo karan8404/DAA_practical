@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include <time.h>
 
-int N = 8;
+int N = 13;
 
 void printSolution(int board[N])
 {
@@ -55,7 +56,7 @@ void nQueen(int board[N], int row)
 {
     if (row >= N)
     {
-        printSolution(board);
+        // printSolution(board);
         return;
     }
     for (int i = 0; i < N; i++) // checking all positions vertically in the row
@@ -71,8 +72,14 @@ void nQueen(int board[N], int row)
 int main()
 {
     int board[N];
+
+    clock_t start = clock(); // start the timer
     for (int i = 0; i < N; i++)
         board[i] = -1;
 
     nQueen(board, 0);
+
+    clock_t end = clock();                                      // end the timer
+    double time_spent = (double)(end - start) / CLOCKS_PER_SEC; // calculate elapsed time
+    printf("Time taken: %f\n", time_spent);
 }

@@ -1,9 +1,2 @@
 /.vscode
-/binary_search.exe
-/frackSack.exe
-/jobSequencing.exe
-/knapsack.exe
-/max_min.exe
-/merge_sort.exe
-/N_queen.exe
-/sort.exe
+/*.exe
