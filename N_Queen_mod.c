@@ -107,8 +107,10 @@ int main()
     int space = sizeof(board);
     printf("Space taken by the board: %d bytes\n", space);
 
-    
+    clock_t start1 = clock(); // start the timer
     solveNQueens(0, true);
+    clock_t end1 = clock();                                        // end the timer
+    double time_taken1 = ((double)end1 - start1) / CLOCKS_PER_SEC; // calculate the time taken
     totalSolutions = solutions;
     solutions = 0; // reset solutions count
 
@@ -123,6 +125,7 @@ int main()
     else
         printf("\nTotal solutions: %d\n", solutions);
 
+    printf("Time taken to count solutions: %f seconds\n", time_taken1);
     printf("Time taken: %f seconds\n", time_taken);
     return 0;
 }
