@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 
-int N = 13;
+int N = 11;
 
 void printSolution(int board[N])
 {
